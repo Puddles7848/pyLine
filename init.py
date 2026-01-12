@@ -14,7 +14,12 @@ os.system("clear") # idek.
 rootDir = Path(__file__).parent
 print("[INFO] pyLine's root directory is:",rootDir)
 
-
+# Define pyLine's paths.
+def mkPath(path):
+    if os.path.isabs(path) == True:
+        return os.path.join(rootDir,path.lstrip("/"))
+    elif os.path.isabs(path) != True:
+        return os.path.join(os.getcwd(),path.lstrip("/"))
 
 # Open colors.py
 with open(mkPath("/scripts/colors.py")) as colors:
