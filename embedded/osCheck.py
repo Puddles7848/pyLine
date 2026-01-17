@@ -1,5 +1,4 @@
 import os
-import sys
 
 if os.name == "posix":
     basicOS = "POSIX"

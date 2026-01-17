@@ -1,3 +1,5 @@
+from pathlib import Path
+
 # Define pyLine's paths.
 def mkPath(path):
     if os.path.isabs(path) == True:
