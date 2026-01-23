@@ -7,14 +7,13 @@ os.system("clear") # idek.
 
 # Find pyLine root.
 rootDir = Path(__file__).parent
-print("[INFO] pyLine's root directory is:",rootDir)
 os.chdir(rootDir)
 with open("rootDir", "w") as rootDirFile:
-    file.write(rootDir)
+    rootDirFile.write(str(rootDir))
 
 # Open /embedded/mkPath.py
-with open("embedded/mkPath.py") as mkPath:
-    exec(mkPath.read())
+#with open("embedded/mkPath.py") as mkPath:
+#    exec(mkPath.read())
 
 # Open colors.py
 with open("embedded/colors.py") as colors:
