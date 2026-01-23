@@ -1,18 +1,23 @@
 # Import
 import os
 import subprocess
+from pathlib import Path
 
 os.system("clear") # idek.
 
-# Find root.
+# Find pyLine root.
 rootDir = Path(__file__).parent
 print("[INFO] pyLine's root directory is:",rootDir)
+os.chdir(rootDir)
+with open("rootDir", "w") as rootDirFile:
+    file.write(rootDir)
 
 # Open /embedded/mkPath.py
-with open()
+with open("embedded/mkPath.py") as mkPath:
+    exec(mkPath.read())
 
 # Open colors.py
-with open(mkPath("/scripts/colors.py")) as colors:
+with open("embedded/colors.py") as colors:
     exec(colors.read())
 
-subprocess.run("python", mkPath(/scripts/pySH.py))
+# subprocess.run("python", mkPath(/scripts/pySH.py))
